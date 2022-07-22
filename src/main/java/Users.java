@@ -10,17 +10,18 @@ public class Users {
         Random rand = new Random();
         if (separated.length == 3) {
             for (int i = 0; i < 4; i++){
-                if (users[0][i].equals("0")){
+                if (users[0][i].equals("")){
                     int getID = rand.nextInt();
-                    if (getID == 0) {
-                        users[0][i] = String.valueOf(getID);
-                        users[1][i] = separated[0];
-                        users[2][i] = separated[1];
-                        users[3][i] = separated[2];
-                    }
+                    users[0][i] = String.valueOf(getID);
+                    users[1][i] = separated[0];
+                    users[2][i] = separated[1];
+                    users[3][i] = separated[2];
+                    break;
                 }
                 else {
-                    System.out.println("Can't create a new user. List of user is full.");
+                    if (i == 3) {
+                        System.out.println("Can't create a new user. List of user is full.");
+                    }
                 }
             }
         }
