@@ -3,7 +3,6 @@ import java.util.Random;
 public class Users {
 
     String[][] users = new String[3][5];
-    int usersCount = 0;
 
     public void addUser(String user){
         String[] separated = user.strip().split(" ");
@@ -41,6 +40,12 @@ public class Users {
             else isUserExists = false;
         }
         if (!isUserExists) System.out.println("User with that ID is not exists.");
+    }
+
+    public void displayAllUsers(){
+        for(int i = 0; i < 5; i++){
+            System.out.println(users[0][i] + " " + users[1][i] + " " + users[2][i] + " " + users[3][i]);
+        }
     }
 
 }
