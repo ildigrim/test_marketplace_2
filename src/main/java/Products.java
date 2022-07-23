@@ -41,4 +41,10 @@ public class Products {
         if (!isProductExists) System.out.println("Product with that ID does not exists.");
     }
 
+    public void displayAllProducts(){
+        for(int i = 0; i < 5; i++){
+            System.out.println(products[0][i] + " " + products[1][i] + " " + products[2][i]);
+        }
+    }
+
 }
