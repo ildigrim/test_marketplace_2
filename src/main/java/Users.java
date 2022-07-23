@@ -30,13 +30,17 @@ public class Users {
         }
     }
 
-    public void deleteUser(){
-
+    public void deleteUser(int id){
+        boolean isUserExists = true;
+        for (int i = 0; i < 5; i++) {
+            if (id == Integer.parseInt(users[0][i])){
+                for (int j = 0; j < 3; j++) {
+                    users[j][i] = "";
+                }
+            }
+            else isUserExists = false;
+        }
+        if (!isUserExists) System.out.println("User with that ID is not exists.");
     }
-
-    public void usersStorage(){
-
-    }
-
 
 }
