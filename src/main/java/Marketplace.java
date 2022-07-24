@@ -24,10 +24,16 @@ public class Marketplace {
         while (exitCondition) {
 
             displayMenu();
+            if (!scanner.hasNextInt()) {
+                scanner.next();
+                continue;
+            }
+
 
             int index = scanner.nextInt();
 
             String line = scanner.nextLine();
+
             switch (index) {
                 case 0: exitCondition = false;
                 case 1:
@@ -69,7 +75,7 @@ public class Marketplace {
                     break;
                 default: displayMenu();
             }
-            displayMenu();
         }
+        scanner.close();
     }
 }
