@@ -12,7 +12,6 @@ public class Marketplace {
         System.out.println("0 - exit");
     }
 
-
     public static void main(String[] args) {
         boolean exitCondition = true;
         Scanner scanner = new Scanner(System.in);
